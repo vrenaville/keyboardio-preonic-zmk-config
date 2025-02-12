@@ -13,5 +13,6 @@ manifest:
       import: app/west.yml
     - name: keyboardio-preonic-zmk-module
       remote: keyboardio
+      revision: main
   self:
     path: config
