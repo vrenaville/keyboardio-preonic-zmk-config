@@ -22,11 +22,15 @@
 
 // Hyper key: all the modifiers
 #define HYPER LC(LS(LA(LGUI)))
-
 // define autoshift feature
 #define AS(keycode) &as LS(keycode) keycode
-
 / {
+    chosen {
+        // Valid choices: [ &mit_layout, &ortho_layout ]
+        zmk,physical-layout = &mit_layout;
+    };
+
+
         behaviors {
             as: auto_shift {
                 compatible = "zmk,behavior-hold-tap";
@@ -43,11 +47,6 @@
 
 
 
-/ {
-    chosen {
-        // Valid choices: [ &mit_layout, &ortho_layout ]
-        zmk,physical-layout = &mit_layout;
-    };
 
     keymap {
         compatible = "zmk,keymap";
