@@ -56,7 +56,7 @@
  &trans      &trans      &trans      &trans      &trans      &trans      &kp BSLH    &kp LS(LBKT) &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
  &kp CAPS    &trans      &trans      &trans      &trans      &trans      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &trans     &trans
  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans       &trans       &trans     &trans     &trans
- &trans      &trans      &kp RALT    &trans      &trans            &trans            &trans       &kp HOME       &kp PG_UP     &kp PG_DOWN     &kp END
+ &trans      &trans      &kp RALT    &trans      &trans            &trans            &trans       &kp HOME       &kp PG_UP     &kp PG_DN     &kp END
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
