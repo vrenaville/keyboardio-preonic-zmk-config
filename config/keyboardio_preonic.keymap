@@ -28,7 +28,7 @@
 / {
     chosen {
         // Valid choices: [ &mit_layout, &ortho_layout ]
-        zmk,physical-layout = &ortho_layout;
+        zmk,physical-layout = &mit_layout;
     };
 
 
