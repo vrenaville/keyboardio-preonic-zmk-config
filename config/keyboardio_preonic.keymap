@@ -42,7 +42,7 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-            aa: auto_shift {
+            aa: auto_ralt {
                 compatible = "zmk,behavior-hold-tap";
                 label = "auto altgr";
                 #binding-cells = <2>;
