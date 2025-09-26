@@ -73,10 +73,10 @@
             bindings = <
                                                                                                                &trans     &trans     &trans
 
- &kp ESC     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7       &kp F8       &kp F9     &kp F12    &kp BKSP
+ &kp ESC     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7       &kp F8       &kp F9     &kp F12    &kp EQUAL
  &trans      &trans      &trans      &trans      &trans      &trans      &kp HOME    &kp END &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
  &kp CAPS    &trans      &trans      &trans      &trans      &trans      &kp INS    &kp DEL     &kp BSPC       &kp LEFT_BRACE  &kp RIGHT_BRACE     &trans
- &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans       &trans       &trans     &trans     &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans       &kp STAR       &kp PLUS     &kp BACKSLASH     &kp PIPE
  &trans      &trans      &kp RALT    &trans      &trans            &trans            &trans       &kp HOME       &kp PG_UP     &kp PG_DN     &kp END
 
             >;
