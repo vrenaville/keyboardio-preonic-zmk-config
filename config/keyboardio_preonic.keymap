@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "zmk-helpers/helper.h"
 
-#define LOWER 1
-#define RAISE 2
+#define LOWER 2
+#define RAISE 1
 
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
