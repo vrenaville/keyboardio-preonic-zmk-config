@@ -15,7 +15,7 @@ manifest:
       import: app/west.yml
     - name: keyboardio-preonic-zmk-module
       remote: keyboardio
-      revision: main
+      revision: vre_config 
     - name: zmk-helpers
       remote: urob
       revision: main
