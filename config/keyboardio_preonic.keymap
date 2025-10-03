@@ -25,7 +25,17 @@
 // Define copy paster in terminal
 #define TCOPY LC(LS(C))
 #define TPASTE LC(LS(V))
-
+// define macro
+ZMK_MACRO(accent_grave, macro,
+    wait-ms = <100>;
+    tap-ms = <0>;
+    bindings = <&kp SQT &kp e >;
+)
+ZMK_MACRO(c_cedille, macro,
+    wait-ms = <100>;
+    tap-ms = <0>;
+    bindings = <&kp SQT &kp c >;
+)
 // define autoshift feature
 #define AS(keycode) &as LS(keycode) keycode
 #define ARA(keycode) &as RA(keycode) keycode
