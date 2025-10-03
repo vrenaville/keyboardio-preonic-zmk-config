@@ -50,15 +50,7 @@
 
         };
 
-    macros {
-        accent_cir: accent_cir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp N6 &kp e>
-                ;
-        };
-    };
+
 
 
 
