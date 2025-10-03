@@ -26,12 +26,12 @@
 #define TCOPY LC(LS(C))
 #define TPASTE LC(LS(V))
 // define macro
-ZMK_MACRO(accent_grave, macro,
+ZMK_MACRO(accent_grave,
     wait-ms = <100>;
     tap-ms = <0>;
     bindings = <&kp SQT &kp e >;
 )
-ZMK_MACRO(c_cedille, macro,
+ZMK_MACRO(c_cedille,
     wait-ms = <100>;
     tap-ms = <0>;
     bindings = <&kp SQT &kp c >;
