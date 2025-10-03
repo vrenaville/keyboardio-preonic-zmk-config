@@ -13,11 +13,21 @@ bindings
   <&macro_tap &kp END>,
   <&macro_release &kp LSHFT>;
 };
-m_mul_on: m_line_sel {
+m_mul_on: m_mul_on {
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
 bindings
-= <&macro_press &kp LSHFT>;
+= <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>,
+  <&macro_tap &rgb_ug RGB_ON>,
+  <&macro_tap &kp HOME>,
+  <&macro_press &kp LSHFT>;
+};
+m_mul_off: m_mul_off {
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings
+= <&macro_tap &rgb_ug RGB_OFF>,
+  <&macro_release &kp LSHFT>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
