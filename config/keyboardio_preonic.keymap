@@ -43,12 +43,21 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "AUTO_SHIFT";
                 #binding-cells = <2>;
-                tapping_term_ms = <170>;
+                tapping_term_ms = <200>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-
+            db: double-bracket {
+                compatible = "zmk,behavior-hold-tap";
+                label = "DOUBLE_BRACKET";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <0>;
+                global-quick-tap;
+                bindings = <&macro_quotes>, <&macro_dquotes>;
+            };
         };
 
 
@@ -66,7 +75,7 @@
 
  &kp ESC   AS(N1)      AS(N2)      AS(N3)      AS(N4)      AS(N5)      AS(N6)      AS(N7)      AS(N8)      AS(N9)      AS(N0)      AS(MINUS)
  &kp TAB     AS(Q)       AS(W)       AS(E)       AS(R)       AS(T)       AS(Y)       AS(U)       AS(I)       AS(O)       AS(P)       &kp BKSP
- AS(GRAVE)     AS(A)       AS(S)       AS(D)       ARA(F)       ARA(G)       ARA(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    AS(SQT)
+ AS(GRAVE)     AS(A)       AS(S)       AS(D)       AS(F)       AS(G)       AS(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    &db
  &kp LSHFT   ARA(Z)       AS(X)       AS(C)       AS(V)       AS(B)        AS(N)       AS(M)       AS(COMMA)   AS(PERIOD)  AS(SLASH)   AP(ENTER)
  &kp LCTRL   &kp RALT   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp UP    &kp DOWN      &kp RIGHT
 
@@ -80,8 +89,8 @@
                                                                                                                &trans     &trans     &trans
 
  &kp ESC     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7       &kp F8       &kp F9     &kp F12    &kp EQUAL
- &trans      &trans      &trans      &macro_accent_cir      &trans      &trans      &kp HOME    &kp END &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
- &kp CAPS    &trans      &trans      &trans      &trans      &trans      &kp INS    &kp DEL     &kp BSPC       &kp LEFT_BRACE  &kp RIGHT_BRACE     &trans
+ &trans      &trans      &trans      &macro_accent_cir      &trans      &trans      &kp HOME    &macro_u_grave &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
+ &kp CAPS    &trans      &trans      &trans      &macro_accent_aigu      &macro_accent_grave      &kp INS    &kp DEL     &kp BSPC       &kp LEFT_BRACE  &kp RIGHT_BRACE     &trans
  &trans      &trans      &trans      &kp TCOPY    &kp TPASTE      &trans      &trans      &trans       &kp STAR       &kp PLUS     &kp BACKSLASH     &kp PIPE
  &trans      &trans      &kp RALT    &trans      &trans            &trans            &trans       &kp HOME       &kp PG_UP     &kp PG_DN     &kp END
 
