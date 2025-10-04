@@ -30,6 +30,7 @@
 #define AS(keycode) &as LS(keycode) keycode
 #define ARA(keycode) &as RA(keycode) keycode
 #define AP(keycode) &as PIPE keycode
+#define AC(keycode) &as &m_accent_cir keycode
 / {
     chosen {
         // Valid choices: [ &mit_layout, &ortho_layout ]
@@ -65,7 +66,7 @@
                                                                                                              &kp K_PREV    &mo K_NEXT      &kp C_MUTE
 
  &kp ESC   AS(N1)      AS(N2)      AS(N3)      AS(N4)      AS(N5)      AS(N6)      AS(N7)      AS(N8)      AS(N9)      AS(N0)      AS(MINUS)
- &kp TAB     AS(Q)       AS(W)       AS(E)       AS(R)       AS(T)       AS(Y)       AS(U)       AS(I)       AS(O)       AS(P)       &kp BKSP
+ &kp TAB     AS(Q)       AS(W)       AC(E)       AS(R)       AS(T)       AS(Y)       AS(U)       AS(I)       AS(O)       AS(P)       &kp BKSP
  AS(GRAVE)     AS(A)       AS(S)       AS(D)       ARA(F)       ARA(G)       ARA(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    AS(SQT)
  &kp LSHFT   ARA(Z)       AS(X)       AS(C)       AS(V)       AS(B)        AS(N)       AS(M)       AS(COMMA)   AS(PERIOD)  AS(SLASH)   AP(ENTER)
  &kp LCTRL   &kp RALT   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp UP    &kp DOWN      &kp RIGHT
