@@ -2,7 +2,7 @@ m_accent_cir: m_accent_cir {
 compatible = "zmk,behavior-macro";
 #binding-cells = <1>;
 bindings
-= <&macro_param_1to1>
+= <&macro_param_1to1>,
 <&macro_tap &kp RA(N6) &kp MACRO_PLACEHOLDER>>;
 };
 m_line_sel: m_line_sel {
