@@ -1,5 +1,5 @@
 m_accent_cir: m_accent_cir {
-compatible = "zmk,bbehavior-macro-one-param";
+compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
 bindings
 = <&macro_param_1to1>,
