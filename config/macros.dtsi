@@ -1,0 +1,50 @@
+m_accent_cir: m_accent_cir {
+compatible = "zmk,behavior-macro-two-param";
+#binding-cells = <2>;
+bindings 
+= <&macro_param_1to1>
+   , <&macro_tap &kp MACRO_PLACEHOLDER>
+   , <&macro_param_2to1>
+   , <&macro_tap &kp MACRO_PLACEHOLDER>;
+};
+m_line_sel: m_line_sel {
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings
+= <&macro_tap &kp HOME>,
+  <&macro_tap &kp HOME>,
+  <&macro_press &kp LSHFT>,
+  <&macro_tap &kp DOWN>,
+  <&macro_release &kp LSHFT>;
+};
+
+macro_quotes: macro_quotes{
+compatible = "zmk,behavior-macro";
+label = "macro_quotes";
+#binding-cells = <0>;
+bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+};
+macro_dquotes: macro_dquotes{
+compatible = "zmk,behavior-macro";
+label = "macro_dquotes";
+#binding-cells = <0>;
+bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+};
+macro_braces: macro_braces{
+compatible = "zmk,behavior-macro";
+label = "macro_braces";
+#binding-cells = <0>;
+bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+};
+macro_parens: macro_parens{
+compatible = "zmk,behavior-macro";
+label = "macro_parens";
+#binding-cells = <0>;
+bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+};
+macro_brackets: macro_brackets{
+compatible = "zmk,behavior-macro";
+label = "macro_brackets";
+#binding-cells = <0>;
+bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+};

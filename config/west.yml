@@ -3,7 +3,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: keyboardio
-      url-base: https://github.com/keyboardio
+      url-base: https://github.com/vrenaville
+
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -13,6 +14,7 @@ manifest:
       import: app/west.yml
     - name: keyboardio-preonic-zmk-module
       remote: keyboardio
-      revision: main
+      revision: main 
+
   self:
     path: config
