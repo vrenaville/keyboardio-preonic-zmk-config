@@ -32,6 +32,7 @@
 #define MA(keycode) &m_accent_cir SQT keycode
 #define MG(keycode) &m_accent_cir GRAVE keycode
 #define MC(keycode) &m_accent_cir LS(N6) keycode
+#define MU(keycode) &m_accent_cir LS(DQT) keycode
 / {
     chosen {
         // Valid choices: [ &mit_layout, &ortho_layout ]
@@ -83,7 +84,7 @@
 
  &kp ESC     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7       &kp F8       &kp F9     &kp F12    &kp EQUAL
  &kp CAPS      &none      &none      MC(E)      &none      &none      &kp HOME    &kp END &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
- &kp GRAVE    &none      &none   &none      &none      &none      MG(U)    MC(U)     MC(O)       &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp SQT
+ AS(GRAVE)    &none      &none   &none      &none      MU(E)      MG(U)    MC(U)     MC(O)       &kp LEFT_BRACE  &kp RIGHT_BRACE     AS(SQT)
  &none      &none      &none      &kp TCOPY    &kp TPASTE      &none      &none      &none       &kp STAR       &kp PLUS     &kp BACKSLASH     &kp PIPE
  &none      &none      &kp RALT    &none      &none            &none            &none       &kp HOME       &kp PG_UP     &kp PG_DN   &kp END
 
@@ -98,7 +99,7 @@
 
  &out OUT_TOG &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6      &kp F7      &kp F8     &kp F9      &kp F10      &kp F11
  &none       &bt BT(0)   &bt BT(1)   &bt BT(2)   &bt BT(3)   &bt BT(4)      &bt BT_CLR      &none      &none     &none      &bt BT_CLR_ALL       &kp F12
- &none       MG(A)      MC(A)      MC(E)      MA(E)      MG(E)      &kp HOME      &kp INS      &none     &none      &none      &none
+ AS(GRAVE)       MG(A)      MC(A)      MC(E)      MA(E)      MG(E)      &kp HOME      &kp INS      &none     &none      &none      AS(SQT)
  &none       &m_line_sel      &none      &kp TCOPY    &kp TPASTE      &none      &none      &none      &none     &none      &none      &none
  &sys_reset  &none      &none      &none      &studio_unlock    &none             &none       &kp HOME       &kp PG_UP     &kp PG_DN    &kp END
 
