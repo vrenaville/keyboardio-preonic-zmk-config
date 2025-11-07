@@ -28,9 +28,10 @@
 
 // define autoshift feature
 #define AS(keycode) &as LS(keycode) keycode
-#define MA(keycode) &m_accent_cir RA(SQT) keycode
-#define MG(keycode) &m_accent_cir RA(GRAVE) keycode
-#define MC(keycode) &m_accent_cir RA(N6) keycode
+#define DK(keycode) &as RA(LS(keycode)) RA(keycode)
+#define MA(keycode) &m_accent_cir SQT keycode
+#define MG(keycode) &m_accent_cir GRAVE keycode
+#define MC(keycode) &m_accent_cir LS(N6) keycode
 / {
     chosen {
         // Valid choices: [ &mit_layout, &ortho_layout ]
@@ -67,7 +68,7 @@
 
  &kp ESC   AS(N1)      AS(N2)      AS(N3)      AS(N4)      AS(N5)      AS(N6)      AS(N7)      AS(N8)      AS(N9)      AS(N0)      AS(MINUS)
  &kp TAB     AS(Q)       AS(W)       AS(E)       AS(R)       AS(T)       AS(Y)       AS(U)       AS(I)       AS(O)       AS(P)       &kp BKSP
- AS(GRAVE)     AS(A)       AS(S)       AS(D)       AS(F)       AS(G)       AS(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    AS(SQT)
+ DK(GRAVE)     AS(A)       AS(S)       AS(D)       AS(F)       AS(G)       AS(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    DK(SQT)
  &kp LSHFT   AS(Z)       AS(X)       AS(C)       AS(V)       AS(B)        AS(N)       AS(M)       AS(COMMA)   AS(PERIOD)  AS(SLASH)   &kp ENTER
  &kp LCTRL   &kp RALT   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp UP    &kp DOWN      &kp RIGHT
 
@@ -81,8 +82,8 @@
                                                                                                                &none     &none     &none
 
  &kp ESC     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7       &kp F8       &kp F9     &kp F12    &kp EQUAL
- &none      &none      &none      MC(E)      &none      &none      &kp HOME    &kp END &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
- &kp CAPS    &none      &none   &none      &none      &none      MG(U)    MC(U)     MC(O)       &kp LEFT_BRACE  &kp RIGHT_BRACE     &none
+ &kp CAPS      &none      &none      MC(E)      &none      &none      &kp HOME    &kp END &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
+ &kp GRAVE    &none      &none   &none      &none      &none      MG(U)    MC(U)     MC(O)       &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp SQT
  &none      &none      &none      &kp TCOPY    &kp TPASTE      &none      &none      &none       &kp STAR       &kp PLUS     &kp BACKSLASH     &kp PIPE
  &none      &none      &kp RALT    &none      &none            &none            &none       &kp HOME       &kp PG_UP     &kp PG_DN   &kp END
 
