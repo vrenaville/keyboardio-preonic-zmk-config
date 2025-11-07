@@ -28,7 +28,7 @@
 
 // define autoshift feature
 #define AS(keycode) &as LS(keycode) keycode
-#define DK(keycode) &as RALT(LS(keycode)) RALT(keycode)
+#define DK(keycode) &as RA(LS(keycode)) RA(keycode)
 #define MA(keycode) &m_accent_cir SQT keycode
 #define MG(keycode) &m_accent_cir GRAVE keycode
 #define MC(keycode) &m_accent_cir LS(N6) keycode
@@ -50,15 +50,7 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-            sqtm: auto_sqt {
-                compatible = "zmk,behavior-hold-tap";
-                label = "AUTO_QUOTE";
-                #binding-cells = <2>;
-                tapping_term_ms = <170>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&m_accent_cir>;
-            };
+
         };
 
 
