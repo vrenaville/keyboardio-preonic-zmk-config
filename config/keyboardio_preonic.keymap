@@ -28,7 +28,6 @@
 
 // define autoshift feature
 #define AS(keycode) &as LS(keycode) keycode
-#define DK(keycode) &as RA(LS(keycode)) RA(keycode)
 #define MA(keycode) &m_accent_cir SQT keycode
 #define MG(keycode) &m_accent_cir GRAVE keycode
 #define MC(keycode) &m_accent_cir LS(N6) keycode
@@ -52,6 +51,20 @@
                 bindings = <&kp>, <&kp>;
             };
 
+            mm_grave: mod_morph_grave {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&m_plain_grave>, <&m_plain_tilde>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            mm_apos: mod_morph_apos {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&m_plain_apos>, <&m_plain_dquot>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
         };
 
 
@@ -69,7 +82,7 @@
 
  &kp ESC   AS(N1)      AS(N2)      AS(N3)      AS(N4)      AS(N5)      AS(N6)      AS(N7)      AS(N8)      AS(N9)      AS(N0)      AS(MINUS)
  &kp TAB     AS(Q)       AS(W)       AS(E)       AS(R)       AS(T)       AS(Y)       AS(U)       AS(I)       AS(O)       AS(P)       &kp BKSP
- DK(GRAVE)     AS(A)       AS(S)       AS(D)       AS(F)       AS(G)       AS(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    DK(SQT)
+ &mm_grave     AS(A)       AS(S)       AS(D)       AS(F)       AS(G)       AS(H)       AS(J)       AS(K)      AS(L)       AS(SEMI)    &mm_apos
  &kp LSHFT   AS(Z)       AS(X)       AS(C)       AS(V)       AS(B)        AS(N)       AS(M)       AS(COMMA)   AS(PERIOD)  AS(SLASH)   &kp ENTER
  &kp LCTRL   &kp RALT   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp UP    &kp DOWN      &kp RIGHT
 
