@@ -51,18 +51,22 @@
                 bindings = <&kp>, <&kp>;
             };
 
-            mm_grave: mod_morph_grave {
-                compatible = "zmk,behavior-mod-morph";
+            mm_grave: mm_grave {
+                compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <0>;
-                bindings = <&m_plain_grave>, <&m_plain_tilde>;
-                mods = <(MOD_LSFT|MOD_RSFT)>;
+                tapping_term_ms = <170>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&m_plain_tilde>, <&m_plain_grave>;
             };
 
-            mm_apos: mod_morph_apos {
-                compatible = "zmk,behavior-mod-morph";
+            mm_apos: mm_apos {
+                compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <0>;
-                bindings = <&m_plain_apos>, <&m_plain_dquot>;
-                mods = <(MOD_LSFT|MOD_RSFT)>;
+                tapping_term_ms = <170>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&m_plain_dquot>, <&m_plain_apos>;
             };
 
         };
