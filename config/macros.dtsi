@@ -1,3 +1,25 @@
+// Plain (non-dead) character macros: send dead key + Space to cancel dead key
+// Works on both Linux us intl and Windows US International
+m_plain_grave: m_plain_grave {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp GRAVE>, <&kp SPACE>;
+};
+m_plain_tilde: m_plain_tilde {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LS(GRAVE)>, <&kp SPACE>;
+};
+m_plain_apos: m_plain_apos {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp SQT>, <&kp SPACE>;
+};
+m_plain_dquot: m_plain_dquot {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp DQT>, <&kp SPACE>;
+};
 m_accent_cir: m_accent_cir {
 compatible = "zmk,behavior-macro-two-param";
 #binding-cells = <2>;
