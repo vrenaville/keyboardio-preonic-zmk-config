@@ -28,7 +28,8 @@
 
 // define autoshift feature
 #define AS(keycode) &as LS(keycode) keycode
-#define DK(keycode) &as RA(LS(keycode)) RA(keycode)
+// Dead key for Windows US-Intl: key + SPACE gives the literal char (tap: ', hold: ")
+#define DK(keycode) &dk LS(keycode) keycode
 #define MA(keycode) &m_accent_cir SQT keycode
 #define MG(keycode) &m_accent_cir GRAVE keycode
 #define MC(keycode) &m_accent_cir LS(N6) keycode
@@ -50,6 +51,24 @@
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
+            };
+
+            dk_space: dk_space {
+                compatible = "zmk,behavior-macro-one-param";
+                #binding-cells = <1>;
+                bindings
+                    = <&macro_param_1to1>
+                    , <&macro_tap &kp MACRO_PLACEHOLDER>
+                    , <&macro_tap &kp SPACE>;
+            };
+
+            dk: dead_key {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                tapping_term_ms = <170>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&dk_space>, <&dk_space>;
             };
 
         };
